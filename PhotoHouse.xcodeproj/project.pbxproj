@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61B9B94E2FA0D90986A84D6B /* Pods_PhotoHouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23F7669A09975051CF98722 /* Pods_PhotoHouse.framework */; };
 		B3253E031FD588700008E3C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3253E021FD588700008E3C5 /* AppDelegate.swift */; };
 		B3253E051FD588700008E3C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3253E041FD588700008E3C5 /* ViewController.swift */; };
 		B3253E081FD588700008E3C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3253E061FD588700008E3C5 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3569840850F93B20B9EE1A14 /* Pods-PhotoHouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoHouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoHouse/Pods-PhotoHouse.debug.xcconfig"; sourceTree = "<group>"; };
 		B3253DFF1FD588700008E3C5 /* PhotoHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3253E021FD588700008E3C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3253E041FD588700008E3C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		B3253E0C1FD588710008E3C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3253E0F1FD588710008E3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3253E111FD588710008E3C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C721F4A505BF927043883B68 /* Pods-PhotoHouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoHouse.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoHouse/Pods-PhotoHouse.release.xcconfig"; sourceTree = "<group>"; };
+		F23F7669A09975051CF98722 /* Pods_PhotoHouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoHouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61B9B94E2FA0D90986A84D6B /* Pods_PhotoHouse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F85F86BEED4D6B39906AA6B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3569840850F93B20B9EE1A14 /* Pods-PhotoHouse.debug.xcconfig */,
+				C721F4A505BF927043883B68 /* Pods-PhotoHouse.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A1EFCFCC9E985BDC1505C13D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F23F7669A09975051CF98722 /* Pods_PhotoHouse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B3253DF61FD588700008E3C5 = {
 			isa = PBXGroup;
 			children = (
 				B3253E011FD588700008E3C5 /* PhotoHouse */,
 				B3253E001FD588700008E3C5 /* Products */,
+				5F85F86BEED4D6B39906AA6B /* Pods */,
+				A1EFCFCC9E985BDC1505C13D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3253E141FD588710008E3C5 /* Build configuration list for PBXNativeTarget "PhotoHouse" */;
 			buildPhases = (
+				15DC7144C93CAAA1D7358D35 /* [CP] Check Pods Manifest.lock */,
 				B3253DFB1FD588700008E3C5 /* Sources */,
 				B3253DFC1FD588700008E3C5 /* Frameworks */,
 				B3253DFD1FD588700008E3C5 /* Resources */,
+				4904763D94C44C69B26BA4AE /* [CP] Embed Pods Frameworks */,
+				E2574467CEBC900744B2FED4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,6 +160,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15DC7144C93CAAA1D7358D35 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotoHouse-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4904763D94C44C69B26BA4AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PhotoHouse/Pods-PhotoHouse-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyDropbox/SwiftyDropbox.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyDropbox.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoHouse/Pods-PhotoHouse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2574467CEBC900744B2FED4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoHouse/Pods-PhotoHouse-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B3253DFB1FD588700008E3C5 /* Sources */ = {
@@ -276,6 +359,7 @@
 		};
 		B3253E151FD588710008E3C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3569840850F93B20B9EE1A14 /* Pods-PhotoHouse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -285,12 +369,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-23.PhotoHouse";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		B3253E161FD588710008E3C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C721F4A505BF927043883B68 /* Pods-PhotoHouse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,7 +385,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-23.PhotoHouse";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
