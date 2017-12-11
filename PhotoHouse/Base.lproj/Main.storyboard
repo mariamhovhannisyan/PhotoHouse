@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bvn-hY-R00">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -76,6 +76,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="448.80000000000001" y="84.107946026986511"/>
+        </scene>
+        <!--Google Photos View Controller-->
+        <scene sceneID="ZLh-h3-twi">
+            <objects>
+                <viewController id="Bvn-hY-R00" customClass="GooglePhotosViewController" customModule="PhotoHouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UTJ-GZ-mZm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o8u-wo-Vru">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="iCZ-gR-6HJ">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iCZ-gR-6HJ" id="Igr-kG-4QQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Bvn-hY-R00" id="nfn-qZ-XfC"/>
+                                    <outlet property="delegate" destination="Bvn-hY-R00" id="p8k-9M-Ksc"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fj2-bE-kVf">
+                                <rect key="frame" x="300" y="617" width="55" height="30"/>
+                                <state key="normal" title="sign out"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o8u-wo-Vru" firstAttribute="top" secondItem="UTJ-GZ-mZm" secondAttribute="top" id="F2h-kD-oPk"/>
+                            <constraint firstItem="o8u-wo-Vru" firstAttribute="height" secondItem="UTJ-GZ-mZm" secondAttribute="height" multiplier="0.7" id="FWq-Bb-r91"/>
+                            <constraint firstItem="kOP-Yd-QzT" firstAttribute="bottom" secondItem="Fj2-bE-kVf" secondAttribute="bottom" constant="20" id="Rh2-d8-qhL"/>
+                            <constraint firstItem="o8u-wo-Vru" firstAttribute="leading" secondItem="kOP-Yd-QzT" secondAttribute="leading" id="Vdn-NO-01d"/>
+                            <constraint firstItem="kOP-Yd-QzT" firstAttribute="trailing" secondItem="Fj2-bE-kVf" secondAttribute="trailing" constant="20" id="eek-8s-Cmm"/>
+                            <constraint firstItem="o8u-wo-Vru" firstAttribute="trailing" secondItem="kOP-Yd-QzT" secondAttribute="trailing" id="kB4-ug-KMb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kOP-Yd-QzT"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="o8u-wo-Vru" id="HIc-cJ-Wmd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uWF-As-dqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1173.5999999999999" y="83.208395802098963"/>
         </scene>
     </scenes>
 </document>

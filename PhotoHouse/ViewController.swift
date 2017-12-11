@@ -22,8 +22,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNotifications()
-        // consider dropbox log out and
-        // show log in within webview if app is not installed
         self.dropboxImages = []
         accessToDropbox()
         
