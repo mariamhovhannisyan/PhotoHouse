@@ -24,8 +24,8 @@ class iCloudViewController: UIViewController {
         let container = CKContainer.default()
         let privateDatabase = container.privateCloudDatabase
         let predicate = NSPredicate(value: true)
-        let query = CKQuery(recordType: "UserDetails", predicate: predicate)
-        
+        let query = CKQuery(recordType: "", predicate: predicate)
+
         privateDatabase.perform(query, inZoneWith: nil) { (results, error) -> Void in
             if error != nil {
                 print(error?.localizedDescription)

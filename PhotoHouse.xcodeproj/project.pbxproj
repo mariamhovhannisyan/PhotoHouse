@@ -16,6 +16,11 @@
 		B3253E101FD588710008E3C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3253E0E1FD588710008E3C5 /* LaunchScreen.storyboard */; };
 		B3493CE01FDACAAB008E1F73 /* GooglePhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3493CDF1FDACAAB008E1F73 /* GooglePhotosViewController.swift */; };
 		B399D3541FE006E60001B518 /* iCloudViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B399D3531FE006E60001B518 /* iCloudViewController.swift */; };
+		B3BEFEC41FE2AE90000B8F47 /* PhotoHouseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BEFEC31FE2AE90000B8F47 /* PhotoHouseProtocols.swift */; };
+		B3BEFEC61FE2AF57000B8F47 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BEFEC51FE2AF57000B8F47 /* PhotosViewController.swift */; };
+		B3BEFEC91FE2AFE9000B8F47 /* CloudPhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BEFEC81FE2AFE9000B8F47 /* CloudPhotosModel.swift */; };
+		B3BEFECC1FE2B081000B8F47 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BEFECB1FE2B081000B8F47 /* Photo.swift */; };
+		B3BEFED01FE2B0AD000B8F47 /* PhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BEFECF1FE2B0AD000B8F47 /* PhotosModel.swift */; };
 		B3C01AE31FDE6FD4002FB84C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3C01AE21FDE6FD4002FB84C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +37,11 @@
 		B3493CDF1FDACAAB008E1F73 /* GooglePhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePhotosViewController.swift; sourceTree = "<group>"; };
 		B399D3531FE006E60001B518 /* iCloudViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudViewController.swift; sourceTree = "<group>"; };
 		B3B209DC1FDED6FB00211BA8 /* PhotoHouse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhotoHouse.entitlements; sourceTree = "<group>"; };
+		B3BEFEC31FE2AE90000B8F47 /* PhotoHouseProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoHouseProtocols.swift; sourceTree = "<group>"; };
+		B3BEFEC51FE2AF57000B8F47 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		B3BEFEC81FE2AFE9000B8F47 /* CloudPhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudPhotosModel.swift; sourceTree = "<group>"; };
+		B3BEFECB1FE2B081000B8F47 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		B3BEFECF1FE2B0AD000B8F47 /* PhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosModel.swift; sourceTree = "<group>"; };
 		B3C01AE21FDE6FD4002FB84C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C721F4A505BF927043883B68 /* Pods-PhotoHouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoHouse.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoHouse/Pods-PhotoHouse.release.xcconfig"; sourceTree = "<group>"; };
 		F23F7669A09975051CF98722 /* Pods_PhotoHouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoHouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,8 +98,11 @@
 		B3253E011FD588700008E3C5 /* PhotoHouse */ = {
 			isa = PBXGroup;
 			children = (
+				B3BEFECA1FE2AFF6000B8F47 /* Entities */,
+				B3BEFEC71FE2AF62000B8F47 /* View */,
 				B3B209DC1FDED6FB00211BA8 /* PhotoHouse.entitlements */,
 				B3253E021FD588700008E3C5 /* AppDelegate.swift */,
+				B3BEFEC31FE2AE90000B8F47 /* PhotoHouseProtocols.swift */,
 				B3253E041FD588700008E3C5 /* ViewController.swift */,
 				B3493CDF1FDACAAB008E1F73 /* GooglePhotosViewController.swift */,
 				B399D3531FE006E60001B518 /* iCloudViewController.swift */,
@@ -100,6 +113,24 @@
 				B3253E091FD588710008E3C5 /* PhotoHouse.xcdatamodeld */,
 			);
 			path = PhotoHouse;
+			sourceTree = "<group>";
+		};
+		B3BEFEC71FE2AF62000B8F47 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B3BEFEC51FE2AF57000B8F47 /* PhotosViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B3BEFECA1FE2AFF6000B8F47 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B3BEFEC81FE2AFE9000B8F47 /* CloudPhotosModel.swift */,
+				B3BEFECB1FE2B081000B8F47 /* Photo.swift */,
+				B3BEFECF1FE2B0AD000B8F47 /* PhotosModel.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,10 +171,10 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.iCloud = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -254,9 +285,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3493CE01FDACAAB008E1F73 /* GooglePhotosViewController.swift in Sources */,
+				B3BEFEC41FE2AE90000B8F47 /* PhotoHouseProtocols.swift in Sources */,
 				B399D3541FE006E60001B518 /* iCloudViewController.swift in Sources */,
+				B3BEFECC1FE2B081000B8F47 /* Photo.swift in Sources */,
 				B3253E051FD588700008E3C5 /* ViewController.swift in Sources */,
+				B3BEFEC61FE2AF57000B8F47 /* PhotosViewController.swift in Sources */,
+				B3BEFED01FE2B0AD000B8F47 /* PhotosModel.swift in Sources */,
 				B3253E031FD588700008E3C5 /* AppDelegate.swift in Sources */,
+				B3BEFEC91FE2AFE9000B8F47 /* CloudPhotosModel.swift in Sources */,
 				B3253E0B1FD588710008E3C5 /* PhotoHouse.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,12 +431,11 @@
 			baseConfigurationReference = 3569840850F93B20B9EE1A14 /* Pods-PhotoHouse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = PhotoHouse/PhotoHouse.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DV6VFG2P7N;
+				DEVELOPMENT_TEAM = 766C7D75GF;
 				INFOPLIST_FILE = PhotoHouse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-23.PhotoHouse.mar";
+				PRODUCT_BUNDLE_IDENTIFIER = con.photoHouse.marhovhannisyan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -412,12 +447,11 @@
 			baseConfigurationReference = C721F4A505BF927043883B68 /* Pods-PhotoHouse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = PhotoHouse/PhotoHouse.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DV6VFG2P7N;
+				DEVELOPMENT_TEAM = 766C7D75GF;
 				INFOPLIST_FILE = PhotoHouse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-23.PhotoHouse.mar";
+				PRODUCT_BUNDLE_IDENTIFIER = con.photoHouse.marhovhannisyan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
