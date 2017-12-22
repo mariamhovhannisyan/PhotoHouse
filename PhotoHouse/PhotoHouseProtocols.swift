@@ -10,25 +10,26 @@ import Foundation
 import UIKit
 
 protocol PresenterToViewProtocol: class{
-    func showPhotos(photos: CloudPhotosModel);
-    func showError();
+    func showPhotos(photos: [Photo], cloudType: CloudType);
+    func showError(cloudType: CloudType, error: String);
 }
 
 protocol InterectorToPresenterProtocol: class{
-    func photosFetched(news: PhotosModel);
-    func photosFetchedFailed();
+    func photosFetched(photos: [Photo], cloudType: CloudType);
+    func photosFetchedFailed(cloudType: CloudType, error: String);
 }
 
 protocol PresentorToInterectorProtocol: class{
     var presenter: InterectorToPresenterProtocol? {get set} ;
-    func fetchLiveNews();
+    func fetchPhotos(cloudType: CloudType);
 }
 
 protocol ViewToPresenterProtocol: class{
     var view: PresenterToViewProtocol? {get set};
     var interector: PresentorToInterectorProtocol? {get set};
     var router: PresenterToRouterProtocol? {get set}
-    func updateView();
+    //func updateView();
+    func askForPhotosFor(type: CloudType)
 }
 
 protocol PresenterToRouterProtocol: class{

@@ -50,6 +50,9 @@ class GooglePhotosViewController: UIViewController, GIDSignInDelegate, GIDSignIn
     func listFiles() {
         let query = GTLRDriveQuery_FilesList.query()
         query.pageSize = 10
+        service.executeQuery(query) { (ticket, result, error) in
+            
+        }
         service.executeQuery(query,
                              delegate: self,
                              didFinish: #selector(displayResultWithTicket(ticket:finishedWithObject:error:))

@@ -11,6 +11,6 @@ import UIKit
 
 class Photo {
     
-    var image: UIImage?
-    var cloudType: String?
+    var content: UIImage?
+    var cloudType: CloudType?
 }

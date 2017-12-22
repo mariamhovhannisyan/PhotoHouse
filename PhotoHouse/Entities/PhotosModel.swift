@@ -10,6 +10,6 @@ import Foundation
 
 class PhotosModel {
     
-    var photosArray = [Photo]?
+    var photosArray = Array<Photo>()
     
 }

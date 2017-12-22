@@ -8,13 +8,32 @@
 
 import Foundation
 
+enum CloudType: Int {
+    case dropbox
+    case google
+    case icloud
+    
+    static let count: Int = {
+        var max: Int = 0
+        while let _ = CloudType(rawValue: max) { max += 1 }
+        return max
+    }()
+    
+    static let mapper: [CloudType: String] = [
+        .dropbox: "DropBox",
+        .google: "Google Drive",
+        .icloud: "iCloud"
+    ]
+    
+    var stringValue: String {
+        return CloudType.mapper[self]!
+    }
+    
+}
+
 class CloudPhotosModel {
     
-    enum CloudType {
-        case dropbox
-        case google
-        case icloud
-    }
+    
     
     var cloudTypes: [CloudType]?
     

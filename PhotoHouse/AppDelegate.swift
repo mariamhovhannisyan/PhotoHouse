@@ -27,6 +27,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GGLContext.sharedInstance().configureWithError(&configureError)
         assert(configureError == nil, "Error configuring Google services: \(configureError)")
         
+        
+        let photosVC = PhotosRouter.createModule();
+        
+        window = UIWindow(frame: UIScreen.main.bounds);
+        window?.rootViewController = photosVC
+        window?.makeKeyAndVisible();
+        
         return true
     }
 
